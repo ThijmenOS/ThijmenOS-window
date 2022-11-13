@@ -12,10 +12,10 @@
 import ICreateWindow from "./interfaces/IWindowCreation";
 import { ApplicationMetaData, host } from "@thijmenos/common";
 import { GenerateUUID } from "@thijmenos/utils";
-import Window from "./window";
+import { Window } from "./window";
 import { windowOptions } from "./defaults";
 
-class CreateWindow implements ICreateWindow {
+export class CreateWindow implements ICreateWindow {
   private windowContent = "";
   private windowFileLocation = "";
   private windowTitle = "";
@@ -50,5 +50,3 @@ class CreateWindow implements ICreateWindow {
     return window;
   }
 }
-
-export default CreateWindow;

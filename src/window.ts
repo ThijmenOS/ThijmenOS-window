@@ -42,7 +42,7 @@ import {
 let windowCount = 0;
 let lastWindowOnTop: Window;
 
-class Window implements IWindow {
+export class Window implements IWindow {
   private windowHeaderElement!: HTMLDivElement;
   private windowContentElement!: HTMLDivElement;
   private windowFrozenElement!: HTMLDivElement;
@@ -206,5 +206,3 @@ class Window implements IWindow {
       .appendChild(this.windowContainerElement!);
   }
 }
-
-export default Window;

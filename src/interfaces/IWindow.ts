@@ -1,4 +1,4 @@
-import { WindowOptions } from "../types/windowTypes";
+import { WindowOptions } from "@thijmenos/common";
 import Window from "../window";
 
 export default interface IWindow {

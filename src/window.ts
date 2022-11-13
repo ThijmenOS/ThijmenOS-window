@@ -29,8 +29,7 @@ import IWindow from "./interfaces/IWindow";
 
 //Types
 import { window, windowDataActions, windowSelectors } from "./defaults";
-import { ClassOperation, host } from "@thijmenos/common";
-import { WindowOptions } from "./types/windowTypes";
+import { ClassOperation, host, WindowOptions } from "@thijmenos/common";
 
 //Other
 import {

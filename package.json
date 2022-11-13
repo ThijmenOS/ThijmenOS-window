@@ -16,7 +16,7 @@
   "author": "Thijmen Brand",
   "license": "ISC",
   "dependencies": {
-    "@thijmenos/common": "^2.0.3",
+    "@thijmenos/common": "^2.0.5",
     "@thijmenos/eslint-config": "^1.0.0",
     "@thijmenos/graphics": "^1.0.3",
     "@thijmenos/utils": "^1.0.0"

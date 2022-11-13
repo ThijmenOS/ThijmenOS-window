@@ -1,14 +1,21 @@
+/* <Class Documentation>
+
+  <Class Description>
+    This class handles everyting that has to happen before a window can be created, such as getting the application executable that has to go in the window
+
+  <Method Description>
+    Application(): Gather information about the application it has to render
+    InitWindow(): Takes this gathered information and content and makes a new window out of it.
+
+*/
+
 import ICreateWindow from "./interfaces/IWindowCreation";
-import { ApplicationMetaData } from "@thijmenos/common";
-import { BaseWindowOptions, WindowType } from "./types/windowTypes";
+import { ApplicationMetaData, host } from "@thijmenos/common";
+import { GenerateUUID } from "@thijmenos/utils";
+import Window from "./window";
+import { windowOptions } from "./defaults";
 
 class CreateWindow implements ICreateWindow {
-  private readonly windowOptions: BaseWindowOptions = {
-    windowHeight: 400,
-    windowWidth: 700,
-    windowType: WindowType.APPLICATION,
-  };
-
   private windowContent = "";
   private windowFileLocation = "";
   private windowTitle = "";
@@ -22,18 +29,18 @@ class CreateWindow implements ICreateWindow {
 
     this.windowId = GenerateUUID();
 
-    this.windowContent = `<iframe id='${this.windowId}' name='${this.windowId}' class='app-iframe' style="height: ${this.windowOptions.windowHeight}px; width: ${this.windowOptions.windowWidth}px;" src='${host}/static/${this.windowFileLocation}'></iframe>`;
+    this.windowContent = `<iframe id='${this.windowId}' name='${this.windowId}' class='app-iframe' style="height: ${windowOptions.windowHeight}px; width: ${windowOptions.windowWidth}px;" src='${host}/static/${this.windowFileLocation}'></iframe>`;
 
     return this.InitWindow();
   }
 
   public InitWindow(): Window {
-    const window = this._window.NewWindow({
+    const window = new Window({
       windowTitle: this.windowTitle,
       iconLocation: this.windowIconLocation,
-      windowHeight: this.windowOptions.windowHeight,
-      windowWidth: this.windowOptions.windowWidth,
-      windowType: this.windowOptions.windowType,
+      windowHeight: windowOptions.windowHeight,
+      windowWidth: windowOptions.windowWidth,
+      windowType: windowOptions.windowType,
       windowIdentifier: this.windowId!,
     });
     window.InitTemplate();

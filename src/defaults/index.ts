@@ -1,3 +1,5 @@
+import { BaseWindowOptions, WindowType } from "@thijmenos/common";
+
 export const windowSelectors = {
   windowHeaderSelector: "javascript-os-header",
   windowOption: "javascript-os-window-option",
@@ -25,3 +27,9 @@ export const window = `<div id="inner-app-container" class="app-page inner-app-c
               <div id="${windowSelectors.windowContent}" class="${windowSelectors.windowContent}">
               </div>
             </div>`;
+
+export const windowOptions: BaseWindowOptions = {
+  windowHeight: 400,
+  windowWidth: 700,
+  windowType: WindowType.APPLICATION,
+};

@@ -52,6 +52,11 @@ class Window implements IWindow {
 
   public windowOptions!: WindowOptions;
 
+  constructor(windowOptions: WindowOptions) {
+    windowCount++;
+    this.windowOptions = windowOptions;
+  }
+
   private onclick = (ev: Event) => this.Click(ev);
   private dblClick = () => this.DblClick();
   private mouseDown = () => this.MouseDown();
@@ -158,12 +163,6 @@ class Window implements IWindow {
 
     this.RegisterEventListeners();
     this.windowFrozenElement.remove();
-  }
-  public NewWindow(windowOptions: WindowOptions): Window {
-    windowCount++;
-    this.windowOptions = windowOptions;
-
-    return this;
   }
   public InitTemplate(): Window {
     this.windowContainerElement = CreateElementFromString(window);

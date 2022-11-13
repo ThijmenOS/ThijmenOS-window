@@ -34,7 +34,7 @@ export class CreateWindow implements ICreateWindow {
     return this.InitWindow();
   }
 
-  public InitWindow(): Window {
+  private InitWindow(): Window {
     const window = new Window({
       windowTitle: this.windowTitle,
       iconLocation: this.windowIconLocation,

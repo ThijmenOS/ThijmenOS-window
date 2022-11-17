@@ -23,6 +23,7 @@ export class CreateWindow implements ICreateWindow {
   private windowId?: string;
 
   public Application(fileIcon: IconMetadataShape) {
+    console.log(fileIcon);
     this.windowFileLocation = fileIcon.exeLocation;
     this.windowTitle = fileIcon.name;
     this.windowIconLocation = fileIcon.icon;

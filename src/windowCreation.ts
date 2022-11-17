@@ -10,7 +10,7 @@
 */
 
 import ICreateWindow from "./interfaces/IWindowCreation";
-import { ApplicationMetaData, host } from "@thijmenos/common";
+import { IconMetadataShape, host } from "@thijmenos/common";
 import { GenerateUUID } from "@thijmenos/utils";
 import { Window } from "./window";
 import { windowOptions } from "./defaults";
@@ -22,10 +22,10 @@ export class CreateWindow implements ICreateWindow {
   private windowIconLocation?: string;
   private windowId?: string;
 
-  public Application(fileIcon: any | ApplicationMetaData) {
+  public Application(fileIcon: IconMetadataShape) {
     this.windowFileLocation = fileIcon.exeLocation;
-    this.windowTitle = fileIcon.title;
-    this.windowIconLocation = fileIcon.iconLocation;
+    this.windowTitle = fileIcon.name;
+    this.windowIconLocation = fileIcon.icon;
 
     this.windowId = GenerateUUID();
 

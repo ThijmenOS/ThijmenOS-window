@@ -1,4 +1,4 @@
-import { ApplicationMetaData } from "@thijmenos/common";
+import { ApplicationMetaData } from "@thijmen-os/common";
 import { Window } from "../window";
 
 export default interface ICreateWindow {

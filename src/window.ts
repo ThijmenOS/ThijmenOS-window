@@ -29,7 +29,7 @@ import IWindow from "./interfaces/IWindow";
 
 //Types
 import { window, windowDataActions, windowSelectors } from "./defaults";
-import { ClassOperation, host, WindowOptions } from "@thijmenos/common";
+import { ClassOperation, host, WindowOptions } from "@thijmen-os/common";
 
 //Other
 import {
@@ -37,7 +37,7 @@ import {
   CreateElementFromString,
   GetElementByClass,
   InitMovement,
-} from "@thijmenos/graphics";
+} from "@thijmen-os/graphics";
 
 let windowCount = 0;
 let lastWindowOnTop: Window;

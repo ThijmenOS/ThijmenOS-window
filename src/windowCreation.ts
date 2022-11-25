@@ -10,8 +10,8 @@
 */
 
 import ICreateWindow from "./interfaces/IWindowCreation";
-import { IconMetadataShape, host } from "@thijmenos/common";
-import { GenerateUUID } from "@thijmenos/utils";
+import { IconMetadataShape, host } from "@thijmen-os/common";
+import { GenerateUUID } from "@thijmen-os/utils";
 import { Window } from "./window";
 import { windowOptions } from "./defaults";
 

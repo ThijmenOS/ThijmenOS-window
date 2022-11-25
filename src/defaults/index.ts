@@ -1,4 +1,4 @@
-import { BaseWindowOptions, WindowType } from "@thijmenos/common";
+import { BaseWindowOptions, WindowType } from "@thijmen-os/common";
 
 export const windowSelectors = {
   windowHeaderSelector: "javascript-os-header",
